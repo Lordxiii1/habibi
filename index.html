@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomed Just For You | Valentine 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sky-bg">
+        <div class="clouds"></div>
+    </div>
+
+    <div id="game-container">
+        <section id="screen-title" class="screen active">
+            <h1 class="pixel-text main-title">BLOOMED<br>JUST FOR YOU</h1>
+            <div class="floating-flower">🌹</div>
+            <button class="btn-main" onclick="nextScreen('screen-choose')">START GAME</button>
+        </section>
+
+        <section id="screen-choose" class="screen">
+            <h2 class="pixel-text">Pick a Seed</h2>
+            <div class="selection-grid">
+                <div class="flower-opt" onclick="selectFlower('🌹')"><span>🌹</span></div>
+                <div class="flower-opt" onclick="selectFlower('🌻')"><span>🌻</span></div>
+                <div class="flower-opt" onclick="selectFlower('🌷')"><span>🌷</span></div>
+            </div>
+            <p class="hint-text">Select your favorite</p>
+        </section>
+
+        <section id="screen-grow" class="screen">
+            <h2 id="grow-status" class="pixel-text">Ready to plant?</h2>
+            
+            <div id="garden-plot">
+                <div id="stage-display" class="grow-animation">🕳️</div>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <button id="action-btn" class="btn-main" onclick="handleGrowth()">PLANT SEED</button>
+        </section>
+
+        <section id="screen-final" class="screen">
+            <div class="final-content-wrapper">
+                <h1 class="pixel-text pulse final-title">I love you Paula!</h1>
+                
+                <div class="final-row">
+                    <div id="bouquet-result" class="side-bouquet"></div>
+                    
+                    <div class="photo-frame polaroid">
+                        <img src="your-photo.jpg" alt="Us" class="couple-photo">
+                        <div class="polaroid-label">2026 ❤️</div>
+                    </div>
+                </div>
+
+                <button class="btn-main download-btn" onclick="window.print()">SAVE MEMORY</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
